@@ -2,8 +2,6 @@ import React from 'react';
 
 
 const ArticleList = ({ articles }) => {
-
-  
   // console.log(articles)
   return (
     <ul>
