@@ -7,6 +7,7 @@ const ArticleList = ({ articles }) => {
     ...article,
     date: dateRegex.test(article.date) ? article.date : 'Invalid date',
   }));
+
   
   // console.log(articles)
   return (
