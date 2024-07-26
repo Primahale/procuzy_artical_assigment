@@ -37,12 +37,7 @@ function App() {
       const data = await response.json();
       console.log(data)
 
-      const processedArticles = data.map(article => ({
-        ...article,
-        date: dateRegex.test(article.date) ? article.date : 'Invalid date',
-      }));
-      
-      setArticles(processedArticles);
+      setArticles(data);
     } catch (err) {
       setError(err.message);
     }
