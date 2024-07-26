@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const ArticleList = ({ articles }) => {
+
   
   // console.log(articles)
   return (
@@ -17,5 +18,6 @@ const ArticleList = ({ articles }) => {
     </ul>
   );
 };
+
 
 export default ArticleList;
