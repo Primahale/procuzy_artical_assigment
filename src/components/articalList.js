@@ -6,6 +6,7 @@ const ArticleList = ({ articles }) => {
   const validatedArticles = articles.map(article => ({
     ...article,
     url: urlRegex.test(article.url) ? article.url : '#',
+     }));
   // console.log(articles)
   return (
     <ul>
