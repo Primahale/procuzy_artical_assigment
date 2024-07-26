@@ -1,5 +1,7 @@
 const puppeteer = require('puppeteer');
 
+const urlRegex = /^(https?:\/\/)?([\w\d-]+\.)+[a-z]{2,6}(\/[\w\d-]*)*\/?$/;
+
 async function scrapeMedium(topic) {
   let browser;
   try {
@@ -24,8 +26,13 @@ async function scrapeMedium(topic) {
         };
       });
     });
+  const validatedArticles = articles.map(article => ({
+      title: article.title,
+      url: urlRegex.test(article.url) ? article.url : 'Invalid URL',
+      author: article.author,
+    }));
 
-    return articles;
+    return validatedArticles;
     
   } catch (error) {
     console.error('Error during scraping:', error); // Enhanced error logging
