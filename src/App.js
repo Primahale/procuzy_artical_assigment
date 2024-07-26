@@ -23,7 +23,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3000/scrape', {
+      const response = await fetch('https://procuzy-artical-assigment-1.onrender.com/scrape', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ topic }),
