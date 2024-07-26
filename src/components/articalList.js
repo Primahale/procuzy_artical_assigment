@@ -1,16 +1,11 @@
 import React from 'react';
 
-// const urlRegex = /^(https?:\/\/)?([\w\d-]+\.)+[a-z]{2,6}(\/[\w\d-]*)*\/?$/;
-
 const ArticleList = ({ articles }) => {
-  // const validatedArticles = articles.map(article => ({
-  //   ...article,
-  //   url: urlRegex.test(article.url) ? article.url : '#',
-  //    }));
-   // console.log(articles)
+  
+  // console.log(articles)
   return (
     <ul>
-      {articals.map((article, index) => (
+      {articles.map((article, index) => (
         <li key={index}>
           <a href={article.url} target="_blank" rel="noopener noreferrer">
             <h2>{article.title}</h2>
